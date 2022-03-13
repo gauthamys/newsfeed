@@ -1,0 +1,88 @@
+.sidebar{
+    top: 0;
+    left: 0;
+    background-color: #648787;
+    width: minmax(300px, 30%);
+    height: 100vh;
+}
+
+#sidebar-header{
+    color: #ffffff;
+    border: 2px solid black;
+    padding: 20px;
+    padding-top: 60px;
+    background-image: url('https://cdn.pixabay.com/photo/2014/05/21/22/28/old-newspaper-350376__340.jpg');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    height: 90px;
+    transition: height 500ms;
+}
+
+#sidebar-header:hover{
+    height: 150px;
+}
+
+.social-links {
+    display: flex;
+    place-items: center;
+    position: relative;
+    place-content: center;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    width: 15%;
+
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: transform 100ms;
+}
+
+.social-icon:hover {
+    transform: scale(110%);
+}
+
+.social-icon:active {
+    transform: scale(90%);
+}
+
+#sidebar-header > .social-links {
+    opacity: 0%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    top: 2%;
+    left: 2%;
+    transition: opacity 500ms;
+}
+
+#sidebar-header:hover > .social-links {
+    opacity: 100%;
+}
+
+#sidebar-header > h1 {
+    border: mediumslateblue 2px solid;
+    position: relative;
+    padding: 10px;
+    background-color: black;
+    top: 85%;
+    transform: translateY(-70px);
+}
+
+#sidebar-header > p {
+    position: relative;
+    background-color: mediumslateblue;
+    top: 90%;
+    transform: translateY(-110px);
+    padding-left: 10px;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+#sidebar-header:hover > p{
+    opacity: 100%;
+}
